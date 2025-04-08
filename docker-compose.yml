@@ -14,7 +14,7 @@ services:
     container_name: back-container
     
   database:
-    image: mongo
+    image: mongo:4
     restart: always
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
@@ -32,3 +32,6 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: example
       ME_CONFIG_MONGODB_URL: mongodb://root:example@database:27017/
       ME_CONFIG_BASICAUTH: false
+
+
+      
