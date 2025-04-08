@@ -13,10 +13,10 @@ jobs:
               uses: actions/checkout@v4
 
             - name: install dependencies
-              uses: npm i
+              run: npm i
 
             - name: Unit test
-              uses: npm run
+              run: npm run
 
 
 
