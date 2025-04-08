@@ -12,17 +12,25 @@ jobs:
             - name: checkout
               uses: actions/checkout@v4
 
-            - name: check folders and file
-              run: |
-                echo "checking folders and files..."
-                ls -l
-                echo "Folders and files checked."
+            - name: install dependencies
+              uses: npm i
 
-            - name: check node version
-              run: |
-                echo "checking node version..."
-                node -v
-                echo "Node version checked."
+            - name: Unit test
+              uses: npm run test
+
+
+
+            #- name: check folders and file
+              #run: |
+                #echo "checking folders and files..."
+                #ls -l
+                #echo "Folders and files checked."
+
+            #- name: check node version
+              #run: |
+                #echo "checking node version..."
+                #node -v
+                #echo "Node version checked."
 
 #name: Pipeline backend
 
