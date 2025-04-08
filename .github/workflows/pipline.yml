@@ -16,11 +16,11 @@ jobs:
               uses: npm i
 
             - name: Unit test
-              uses: npm run test
+              uses: npm run
 
 
 
-            #- name: check folders and file
+            #- name: check folders and filehhhhhhh
               #run: |
                 #echo "checking folders and files..."
                 #ls -l
