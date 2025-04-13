@@ -41,7 +41,7 @@ jobs:
               run: docker tag kadhem320/back-session7 kadhem320/back-session7:${{ github.run_number }}
 
             - name: push image with version number
-              run: docker push kadhem320/back-session7::${{ github.run_number }}
+              run: docker push kadhem320/back-session7:${{ github.run_number }}
      
             #- name: check folders and filehhhhhhh
               #run: |
