@@ -28,11 +28,11 @@ jobs:
             - name: build docker image
               run: docker build -t kadhem320/back-session7 .   
 
-            #- name: login to dockerhub
-              #uses: docker/login-action@v3
-              #with:
-                    #username: ${{ vars.DOCKERHUB_USERNAME }}
-                    #password: ${{ secrets.DOCKERHUB_TOKEN }}  
+            - name: login to dockerhub
+              uses: docker/login-action@v3
+              with:
+                    username: ${{ vars.DOCKERHUB_USERNAME }}
+                    password: ${{ secrets.DOCKERHUB_TOKEN }}  
      
             #- name: check folders and filehhhhhhh
               #run: |
