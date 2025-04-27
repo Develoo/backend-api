@@ -8,6 +8,7 @@ on:
 env:
   IMAGE_NAME: kadhem320/back-session7
   BUILD_NUMBER: ${{ github.run_number }}
+  SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
 jobs:
   test:
@@ -43,6 +44,12 @@ jobs:
             process.exit(1);
           }
           "
+
+      - uses: act10ns/slack@v2
+        with:
+          status: ${{ job.status }}
+          steps: ${{ toJson(steps) }}
+        if: always()
 
   build-and-push:
     runs-on: ubuntu-latest
